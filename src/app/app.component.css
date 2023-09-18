@@ -1,0 +1,76 @@
+.wrapper {
+    display: inline-flex;
+  }
+  
+  .card, #card {
+    max-width: 400px;
+    margin: 8px;
+    padding: 16px;
+    border: 8px solid gray;
+    background-color: black;
+    text-align: center;
+  }
+  
+  .card img, #card img {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 4px solid grey;
+  }
+  
+  .card h1, #card h1 {
+    font-size: 32px;
+    margin-bottom: 32px;
+    color: white;
+  }
+  
+  details {
+    font-size: 16px;
+    color: white;
+    display: inline-block;
+  }
+  
+  p {
+    font-size: 16px;
+    color: white;
+  }
+  
+  #description.toggled {
+    display: none;
+  }
+  
+  .button-other:hover, .button-other:focus {
+    color: orange;
+    background-color: white;
+  }
+  
+  @media screen and (max-width: 799px) {
+    details {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    div {
+      transform: scale(0.7);
+    }
+  }
+  
+  .button-other { 
+    font-size: 22px;
+    text-decoration: none;
+    background-color: #A6AEB1;
+    color: black;
+    padding: 8px 16px;
+    border-radius: 16px;
+    height:50px
+  }
+  
+  #card.toggled {
+    max-width: 400px;
+    margin: 8px;
+    padding: 16px;
+    border: 8px solid gray;
+    background-color: #FC4B00;
+    text-align: center;
+  }
