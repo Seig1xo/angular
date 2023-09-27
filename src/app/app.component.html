@@ -15,26 +15,51 @@
     
   <Button class="button-other" id="button-duplicate">Duplicate</Button>
   <script> document.querySelector("#button-duplicate").addEventListener('click', (e) => {
-      let card = document.querySelector(".card");
-      let clonedCard = card.cloneNode(true);
-      clonedCard.id = 'clonedcard';
-      document.body.appendChild(clonedCard);
-    })
+    let card = document.querySelector(".card");
+    let clonedCard = card.cloneNode(true);
+    clonedCard.id = 'clonedcard';
+    document.body.appendChild(clonedCard);
+  })
   </script>
     
   <Button class="button-other" id="button-delete">Delete</Button>
   <script> document.querySelector("#button-delete").addEventListener('click', (e) => {
-      let card = document.querySelector(".card");
-      let clonedCard = card.cloneNode(true);
-      clonedCard.id = 'clonedcard';
-      document.querySelector("#clonedcard").remove();
-    })
+    let card = document.querySelector(".card");
+    let clonedCard = card.cloneNode(true);
+    clonedCard.id = 'clonedcard';
+    document.querySelector("#clonedcard").remove();
+  })
   </script>
     
-  <Button class="button-other" id="button-color" onClick="toggleBackground()">Toggle Background Color</Button>
+  <Button class="button-other" id="button-color">Toggle Background Color</Button>
+  <script> document.querySelector("#button-color").addEventListener('click', (e) => {
+    let c = document.querySelector("#card");
+    c.className = 'toggled' == c.className ? '' : 'toggled';
+  })
+  </script>
   
-  <Button class="button-other" id="button-heading" onClick="changeHeading()">Change Heading</Button>
+  <Button class="button-other" id="button-heading">Change Heading</Button>
+  <script> document.querySelector("#button-heading").addEventListener('click', (e) => {
+    let h = document.querySelector("h1");
+    if (h.innerHTML == "MTD") {
+      h.innerHTML = "super";
+    }
+    else {
+      h.innerHTML = "MTD";
+    }
+  })
+  </script>
     
-  <Button class="button-other" id="button-description" onClick="toggleDescription()">Toggle Description</Button>
+  <Button class="button-other" id="button-description">Toggle Description</Button>
+  <script> document.querySelector("#button-description").addEventListener('click', (e) => {
+    const details = document.querySelector('summary');
+    if (details.parentNode.getAttribute('open')) {
+      details.parentNode.removeAttribute('open');
+    }
+    else {
+      details.parentNode.setAttribute('open','open');   
+    }
+  })
+  </script>
     
 </div>  
